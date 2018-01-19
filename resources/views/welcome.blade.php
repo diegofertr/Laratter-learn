@@ -49,6 +49,10 @@
                 font-size: 84px;
             }
 
+            .subtitle {
+                font-size:20px;
+            }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -79,9 +83,18 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laratter by YeyO
+                    Laratter
                 </div>
 
+                @if (isset($teacher))
+                    <div class="subtitle m-b-md">
+                        by {{ $teacher }}
+                    </div>
+                @else
+                    <div class="subtitle m-b-md">
+                        Profesor a definir
+                    </div>
+                @endif
                 <div class="links">
                     @foreach ($links as $link => $text)                    
                         <a href=" {{ $link }} "> {{ $text }} </a>
