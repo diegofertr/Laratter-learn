@@ -3,7 +3,5 @@
 Acerca de Nosotros | Laratter
 @endsection
 @section('content')
-    <div class="title m-b-md">
-        Acerca de nosotros!!!
-    </div>
+    <h2>Acerca de nosotros!!!</h2>
 @endsection
