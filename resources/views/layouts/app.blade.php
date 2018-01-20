@@ -12,7 +12,7 @@
         <div class="row">
                 <div class="col s12">
                     <nav>
-                        <div class="nav-wrapper teal lighten-2">
+                        <div class="nav-wrapper light-blue darken-2 lighten-2">
                             <a href="#" class="brand-logo">Laratter</a>
                             <ul id="nav-mobile" class="right hide-on-med-and-down">
                                 <li><a href="/">Home</a></li>
