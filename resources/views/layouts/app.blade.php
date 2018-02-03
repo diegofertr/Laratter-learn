@@ -17,14 +17,23 @@
                             <ul id="nav-mobile" class="right hide-on-med-and-down">
                                 <li><a href="/">Home</a></li>
                             </ul>
+                            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                <li>
+                                    <a href="/createMessage">
+                                        <i class="large material-icons">add</i>
+                                    </a>
+                                    
+                                </li>
+                            </ul>
                         </div>
                     </nav>
-                    <div class="container">
+                    <div class="container" id="app">
                         @yield('content')
                     </div>
                 </div> 
               </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script src={{asset('js/app.js')}}></script>
     </body>
 </html>
