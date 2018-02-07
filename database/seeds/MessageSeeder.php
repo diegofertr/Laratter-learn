@@ -13,8 +13,12 @@ class MessageSeeder extends Seeder
     public function run()
     {
         //factory(Message::class, 6)->create();
-        factory(Message::class)
-            ->times(100)
-            ->create();
+        factory(App\User::class, 20)->create()->each(function(App\User $user) {
+            factory(Message::class)
+                ->times(3)
+                ->create([
+                    'user_id' => $user->id
+                ]);
+        });
     }
 }

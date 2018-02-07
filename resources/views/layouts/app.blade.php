@@ -12,12 +12,11 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    {{--  <style>
+    <!--  <style>
         .card {
-            width: 450px;
             height: 450px;
         }
-    </style>  --}}
+    </style>  -->
 </head>
 <body>
     <div class="row">
@@ -31,12 +30,13 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                         <li class="dropdown">
-                            <a href="#" class='dropdown-button btn light-blue' data-activates='dropdown1'>
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                            <a href="#" class='dropdown-button light-blue' data-activates='dropdown1'>
+                                {{ Auth::user()->username }} <span class="caret"></span>
                             </a>
                             
-                            <ul id="dropdown1" class="dropdown-content">
-                                <li>
+                            <ul id="dropdown1" class="dropdown-content black-text">
+                                <li class="divider"></li>
+                                <li class="black-text">
                                     <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">

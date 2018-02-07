@@ -22,6 +22,17 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="jhonydav" id="username" type="text" class="validate" name="username" value="{{ old('username') }}" required autofocus>
+                                <label for="username">Username</label>
+                                @if ($errors->has('username'))
+                                    <span class="help-block">
+                                    <strong>{{ $errors->first('username') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="input-field col s12 {{ $errors->has('email') ? ' has-error' : '' }}">
                                 <input placeholder="jhon.doe@example.com" id="email" type="email" class="validate" name="email" value="{{ old('email') }}" required>
                                 <label for="email">Email</label>

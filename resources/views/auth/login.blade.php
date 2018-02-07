@@ -25,7 +25,7 @@
                         <div class="row">
                             <div class="input-field col s12 {{ $errors->has('password') ? ' has-error' : '' }}">
                                 <i class="material-icons prefix">lock</i>
-                                <input id="password" type="password" class="validate" name="password" required>
+                                <input id="password" type="password" class="validate" name="password" required autofocus>
                                 <label for="password">Password</label>
                                 @if ($errors->has('password'))
                                 <span class="help-block">
