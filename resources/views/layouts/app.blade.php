@@ -21,16 +21,35 @@
 <body>
     <div class="row">
         <div class="col s12">
-            <nav>
+            <nav class="nav-extended">
                 <div class="nav-wrapper light-blue darken-2 lighten-2">
                     <a href="/" class="brand-logo">Laratter</a>
+                    
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a href="/blog">
+                                <i class="large material-icons left">web</i>
+                                Blog
+                            </a>
+                        </li>
                         @guest
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
+                        <li>
+                            <a href="/admin/blog">
+                                <i class="large material-icons left">web</i>
+                                Admin Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/createMessage">
+                                <i class="large material-icons">add</i>
+                            </a>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class='dropdown-button light-blue' data-activates='dropdown1'>
+                                <i class="large material-icons left">face</i>
                                 {{ Auth::user()->username }} <span class="caret"></span>
                             </a>
                             
@@ -48,14 +67,8 @@
                                 </form>
                                 </li>
                             </ul>
-                        </li>
-                        <li>
-                            <a href="/createMessage">
-                                <i class="large material-icons">add</i>
-                            </a>
-                        </li>
+                        </li>                        
                     @endguest
-                    
                 </ul>
             </div>
         </nav>

@@ -22,4 +22,8 @@ class PagesController extends Controller
         // 3ra forma de devolver datos
         return view('welcome', compact('messages'));
     }
+
+    public function blog () {
+        return view('blog.index');
+    }
 }

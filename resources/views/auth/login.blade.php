@@ -13,7 +13,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">email</i>
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="email" placeholder="example@example.com" type="email" class="validate" name="email" value="{{ old('email') }}" required autofocus>
                                 <label for="email">Email</label>
                                 @if ($errors->has('email'))
                                 <span class="help-block">
@@ -21,11 +21,22 @@
                                 </span>
                                 @endif
                             </div>
+                            {{-- <div class="input-field col s12">
+                                <i class="material-icons prefix">person</i>
+                                <input id="username" placeholder="my_username" type="text" class="validate" name="username" value="{{ old('username') }}" required autofocus>
+                                <label for="username">Username</label>
+                                @if ($errors->has('username'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('username') }}</strong>
+                                </span>
+                                @endif
+                            </div> --}}
+
                         </div>
                         <div class="row">
                             <div class="input-field col s12 {{ $errors->has('password') ? ' has-error' : '' }}">
                                 <i class="material-icons prefix">lock</i>
-                                <input id="password" type="password" class="validate" name="password" required autofocus>
+                                <input id="password" placeholder="***********" type="password" class="validate" name="password" required autofocus>
                                 <label for="password">Password</label>
                                 @if ($errors->has('password'))
                                 <span class="help-block">

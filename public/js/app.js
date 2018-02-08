@@ -1081,6 +1081,10 @@ module.exports = __webpack_require__(48);
 
 __webpack_require__(12);
 
+$(document).ready(function () {
+    $('.materialboxed').materialbox();
+});
+
 window.Vue = __webpack_require__(36);
 
 Vue.component('example-component', __webpack_require__(39));
@@ -43158,6 +43162,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['name', 'lastName'],
@@ -43234,6 +43239,8 @@ var render = function() {
         [_c("i", { staticClass: "material-icons" }, [_vm._v("add")])]
       )
     ]),
+    _vm._v(" "),
+    _c("br"),
     _vm._v(" "),
     _c(
       "div",
@@ -43320,6 +43327,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['content']
@@ -43334,14 +43343,21 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
-    _c("div", { staticClass: "input-field col s6" }, [
-      _c("input", {
-        staticClass: "validate",
-        attrs: { id: "first_name", type: "text" },
-        domProps: { value: _vm.content }
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "first_name" } }, [_vm._v("First Name")])
+    _c("form", [
+      _c("div", { staticClass: "input-field col s6" }, [
+        _c("input", {
+          staticClass: "validate",
+          attrs: {
+            id: "first_name",
+            type: "text",
+            required: "",
+            autofocus: ""
+          },
+          domProps: { value: _vm.content }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "first_name" } }, [_vm._v("First Name")])
+      ])
     ]),
     _vm._v(" "),
     _c("br")

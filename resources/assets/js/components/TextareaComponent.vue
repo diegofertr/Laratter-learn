@@ -8,6 +8,7 @@
     <div class="col s3">
       <a v-on:click="onPress" class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">add</i></a>
     </div>
+    <br>
     <div class="col s12">
       <input-component 
         v-for="message in messages" 

@@ -7,7 +7,7 @@
   </div>
   <div class="col s6 m10">
     <span class="black-text">
-      <h4> {{ $user->name}} </h4>
+      <h4> {{ $user->name }} </h4>
     </span>
   </div>
 </div>
