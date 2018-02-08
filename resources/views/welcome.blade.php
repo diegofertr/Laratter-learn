@@ -24,5 +24,13 @@
     @empty
     <h4>No hay mensajes destacados :)</h4>
     @endforelse
+    @if (count($messages))            
+        <div class="row">
+            <div class="col s12">
+                {{--  {{ $messages->links() }}  --}}
+                {{ $messages->render() }}
+            </div>
+        </div>
+    @endif
 </div>
 @endsection

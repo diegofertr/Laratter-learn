@@ -9,8 +9,8 @@ class PagesController extends Controller
 {
     public function home () {
         
-        // $messages = Message::paginate(10);
-        $messages = Message::All()->reverse();
+        $messages = Message::latest()->paginate(10);
+        // $messages = Message::All();
         // 1ra forma de devolver datos
         // return view('home', [
         //     'messages' => $messages

@@ -22,3 +22,5 @@ Route::post('/messages/create', 'MessagesController@create')
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/{username}', 'UserController@show');
